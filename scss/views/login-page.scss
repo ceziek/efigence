@@ -1,4 +1,18 @@
 .login-page {
   height: 705px;
   background: url("../assets/background.jpg");
+
+  text-align: center;
+
+  padding-top: 30px;
+  color: $font-color;
+}
+
+.login-wrapper {
+  display: inline-block;
+  width: 1000px;
+
+  .logo {
+    float: right;
+  }
 }
