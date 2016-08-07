@@ -1,6 +1,6 @@
+
 .login-page {
-  height: 705px;
-  background: url("../assets/background.jpg");
+  background: url(../assets/background.jpg);
 
   text-align: center;
 
@@ -9,10 +9,9 @@
 }
 
 .login-wrapper {
-  display: inline-block;
-  width: 1000px;
 
   .logo {
-    float: right;
+    margin-bottom: 30px;
   }
 }
+

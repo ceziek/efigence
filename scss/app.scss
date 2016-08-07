@@ -3,7 +3,7 @@
 @import 'settings';
 @import 'foundation';
 @import 'motion-ui';
-@import 'main';
+
 
 @include foundation-global-styles;
 @include foundation-grid;
@@ -49,3 +49,5 @@
 
 @include motion-ui-transitions;
 @include motion-ui-animations;
+
+@import 'main';

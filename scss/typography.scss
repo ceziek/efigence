@@ -1,0 +1,41 @@
+@font-face {
+  font-family: "Roboto Condensed";
+  src: url(../assets/Fonts/RobotoCondensed-Regular.ttf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Roboto Condensed Light";
+  src: url(../assets/Fonts/RobotoCondensed-Light.ttf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Roboto Condensed Bold";
+  src: url(../assets/Fonts/RobotoCondensed-Bold.ttf);
+  font-weight: 400;
+}
+
+h1 {
+  font-family: "Roboto Condensed Light", sans-serif;
+  font-size: 2.5rem;
+}
+
+p {
+  font-family: "Roboto Condensed Light", sans-serif;
+  font-size: 1rem;
+}
+
+button {
+  font-family: "Roboto Condensed Light", sans-serif;
+}
+
+.client-number {
+  font-family: "Roboto Condensed Bold", sans-serif;
+  font-size: 1.125rem
+}
+
+.footer-menu {
+  font-family: "Roboto Condensed Bold", sans-serif;
+  font-size: 0.8rem;
+}

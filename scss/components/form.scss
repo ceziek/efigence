@@ -2,8 +2,20 @@
   position: relative;
 
   margin-top: 130px;
-  padding: 70px 0 70px 0;
+  padding: 70px 0 0 0;
 
   border: 1px solid #47cbdc;
   border-radius: 5px;
+
+  .client-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 18px;
+
+    .button-x {
+      margin-left: 10px;
+    }
+  }
 }
