@@ -8,14 +8,13 @@
   border-radius: 5px;
 
   .client-number {
-    display: flex;
-    align-items: center;
-    justify-content: center;
 
-    margin-bottom: 18px;
+    span {
+      vertical-align: middle;
+    }
 
-    .button-x {
-      margin-left: 10px;
+    button {
+      vertical-align: middle
     }
   }
 }
