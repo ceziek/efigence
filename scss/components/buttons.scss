@@ -1,3 +1,6 @@
+button {
+  transition: all .3s linear;
+}
 
 .button-x {
   height: 18px;
@@ -16,13 +19,32 @@
   width: 120px;
   height: 30px;
 
-  margin: 20px;
+  margin: 25px;
 
   color: #000000;
   background-color: #ffffff;
 
   border-radius: 5px;
+
+  &:hover {
+    color: #ffffff;
+    background-color: rgba(255, 255, 0, 0.82);
+
+
+  }
 }
 
 .button-other {
+  height: 30px;
+
+  margin-top: 25px;
+
+  color: #ffffff;
+
+  border-radius: 5px;
+
+
+  &:hover {
+    color: rgba(255, 255, 0, 0.82);
+  }
 }

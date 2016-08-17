@@ -22,7 +22,7 @@
                         <h1>Login</h1>
                         <p>Aby, zaimportować dane zaloguj się do swojego banku</p>
 
-                        <form action="#" class="form-login">
+                        <form class="form-login">
                             <span class="avatar"></span>
 
                             <div class="client-number">
@@ -31,13 +31,21 @@
                             </div>
 
                             <div class="login-input">
-                                <input id="password" type="text" title="Password"/>
-                                <button class="button-keyboard show-for-large"><img src="assets/keyboard.png" alt="Keyboard"></button>
-                                <div id="response">aaaaaaa</div>
+                                <div class="input">
+                                    <input id="password"
+                                           type="password"
+                                           title="Password"
+                                           autocomplete="off"
+                                    />
+                                    <div id="message"></div>
+                                    <div id="loader"></div>
+                                </div>
+                                <button class="button-keyboard show-for-large">
+                                    <img src="assets/keyboard.png" alt="Keyboard">
+                                </button>
                             </div>
-
-                            <button class="button-other" type="submit">SELECT OTHER</button>
-                            <button class="button-go" type="submit">GO</button>
+                            <button class="button-other ">SELECT OTHER</button>
+                            <button class="button-go">GO</button>
                         </form>
                     </div>
                 </div>
@@ -62,6 +70,7 @@
 <script src="bower_components/jquery/dist/jquery.js"></script>
 <script src="bower_components/what-input/what-input.js"></script>
 <script src="bower_components/foundation-sites/dist/foundation.js"></script>
+<script src="bower_components/jquery-form-validator/form-validator/jquery.form-validator.js"></script>
 <script src="js/app.js"></script>
 
 </body>
