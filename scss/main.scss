@@ -1,13 +1,17 @@
 @import 'colors';
 @import 'variables';
 @import 'typography';
+@import 'icons';
 
 @import 'components/avatar';
 @import 'components/buttons';
 @import 'components/form';
 @import 'components/input';
 @import 'components/footer';
+@import 'components/tile';
+@import 'components/popup';
 
 @import 'views/login-page';
 @import 'views/login-box';
+@import 'views/dashboard-page';
 

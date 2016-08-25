@@ -1,50 +1,83 @@
 button {
-  transition: all .3s linear;
+    transition: all .3s linear;
 }
 
 .button-x {
-  height: 18px;
-  width: 18px;
+    height: 18px;
+    width: 18px;
 
-  margin: 10px;
+    margin: 10px;
 
-  background: url("../assets/x.png");
+    background: url("../assets/x.png");
 }
 
 .button-keyboard {
-  margin: 10px;
+    margin: 10px;
 }
 
 .button-go {
-  width: 120px;
-  height: 30px;
+    width: 120px;
+    height: 30px;
 
-  margin: 25px;
+    margin: 25px;
 
-  color: #000000;
-  background-color: #ffffff;
+    color: #000000;
+    background-color: #ffffff;
 
-  border-radius: 5px;
+    border-radius: 5px;
 
-  &:hover {
-    color: #ffffff;
-    background-color: rgba(255, 255, 0, 0.82);
+    &:hover {
+        color: #ffffff;
+        background-color: rgba(255, 255, 0, 0.82);
 
-
-  }
+    }
 }
 
 .button-other {
-  height: 30px;
+    height: 30px;
 
-  margin-top: 25px;
+    margin-top: 25px;
 
-  color: #ffffff;
+    color: #ffffff;
 
-  border-radius: 5px;
+    border-radius: 5px;
 
+    &:hover {
+        color: rgba(255, 255, 0, 0.82);
+    }
+}
 
-  &:hover {
-    color: rgba(255, 255, 0, 0.82);
-  }
+//Dashboard
+
+.button__search {
+    color: #fff;
+    vertical-align: middle;
+
+    &.__active,
+    &:hover {
+        color: #e81c7b;
+    }
+}
+
+.button__logout {
+    vertical-align: middle;
+    color: #fff;
+
+    &.__active,
+    &:hover {
+        color: #e81c7b;
+    }
+}
+
+.button__popup {
+    height: 100%;
+    width: 85%;
+    background-color: #13bdd2;
+
+    border-radius: 6px;
+    transition: none;
+
+    &:hover {
+        background-color: #0c4d78;
+    }
 }

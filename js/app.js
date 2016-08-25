@@ -65,7 +65,7 @@ $(document).on('ready', function () {
                 messageNode.message(response)
             },
             success: function (res) {
-                if (res.status == true) location.href = "http://www.wp.pl"
+                if (res.status == true) location.href = "../dashboard.html"
             },
             complete: function () {
                 loader.fadeOut();
@@ -122,10 +122,59 @@ $(document).on('ready', function () {
 
         e.preventDefault();
 
-        if(passwordInput.valid()) {
+        if (passwordInput.valid()) {
             submitLogin();
         } else {
             messageNode.message(passwordInput.msg)
         }
     });
+
+    /**
+     * Dashboard
+     */
+
+    var tileMenu = $('.tile.tile__menu'),
+        buttonControl = $('.icon__control'),
+        buttonSearch = $('.button__search'),
+        buttonLogout = $('.button__logout'),
+        inputSearch = $('.input__search'),
+
+        on = '__active';
+
+
+
+    tileMenu.on('click' , function () {
+        for (var i = 0; i < tileMenu.length; i++) {
+            tileMenu.removeClass(on);
+        }
+
+        $(this).addClass(on);
+    });
+
+    buttonSearch.on('click', function () {
+        $(this).toggleClass(on);
+        inputSearch.toggleClass(on);
+    });
+
+    buttonControl.on('click', function () {
+        if ($(this).next().is('.' + on)) {
+            $(this).next().removeClass(on);
+        } else {
+            buttonControl.next().removeClass(on);
+            $(this).next().addClass(on);
+        }
+    });
+
+
+
+    buttonLogout.on('click', function () {
+       $(this)
+           .addClass('__active')
+           .next()
+           .toggleClass('__active');
+    });
+
+
+
+
 });

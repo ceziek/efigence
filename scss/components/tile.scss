@@ -1,0 +1,58 @@
+.tile {
+    position: relative;
+    height: 180px;
+
+
+    &.tile__menu {
+        text-align: center;
+
+        z-index: 0;
+
+        transition: all 0.3s ease-out;
+
+        &:hover {
+            background-color: #000;
+            color: #fff;
+        }
+
+        &.__active {
+            background-color: #0a0a0a;
+
+            &::before {
+                position: absolute;
+                width: 20px;
+                height: 12px;
+
+                top: 99%;
+                transform: translate(-50%);
+
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+                background-color: inherit;
+                content: '';
+            }
+        }
+
+        i {
+            display: block;
+            margin: -1.2rem 0;
+        }
+
+    }
+
+    .tile__content {
+        position: absolute;
+        max-height: 90%;
+        max-width: 90%;
+
+        z-index: 1;
+
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        white-space: nowrap;
+        color: #fff;
+        border-radius: 10px;
+    }
+}
