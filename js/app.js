@@ -42,7 +42,6 @@ $(document).on('ready', function () {
 
 
     /**
-     *
      * Ajax request for login
      * @param {Object} credits:
      * {
@@ -51,21 +50,32 @@ $(document).on('ready', function () {
      * }
      *
      */
-    var login = function (credits) {
+
+    function sCallback(res) {
+        if (res.status == true) {
+            location.href = "../dashboard.html"
+        }
+    }
+
+    function eCallback(res) {
+        var response = JSON.parse(res.responseText).message;
+
+        messageNode.message(response)
+    }
+
+    var login = function (endpoint, method, data, sCallback, eCallback) {
         $.ajax({
-            type: "post",
-            data: credits,
-            url: "https://efigence-camp.herokuapp.com/api/login",
+            type: method,
+            data: data,
+            url: "https://efigence-camp.herokuapp.com/api/" + endpoint,
             beforeSend: function () {
                 loader.fadeIn();
             },
             error: function (res) {
-                var response = JSON.parse(res.responseText).message;
-
-                messageNode.message(response)
+                eCallback(res)
             },
             success: function (res) {
-                if (res.status == true) location.href = "../dashboard.html"
+                sCallback(res)
             },
             complete: function () {
                 loader.fadeOut();
@@ -80,15 +90,17 @@ $(document).on('ready', function () {
      */
     var submitLogin = function () {
 
-        var name = loginName.html();
-        var pass = passwordInput.val();
+        var name = loginName.html(),
+            pass = passwordInput.val(),
+            data = {
+                login: name,
+                password: pass
+            },
+            endpoint = 'login',
+            method = 'POST';
 
-        var credits = {
-            login: name,
-            password: pass
-        };
 
-        login(credits);
+        login(endpoint, method, data, sCallback, eCallback);
     };
 
 
@@ -133,17 +145,56 @@ $(document).on('ready', function () {
      * Dashboard
      */
 
+    function sendAjax(endpoint, method, data, sCallback, eCallback) {
+
+        $.ajax({
+            method: method,
+            url: "https://efigence-camp.herokuapp.com/api/" + endpoint,
+            data: data
+        })
+            .done(function (msg) {
+                sCallback(msg)
+            })
+            .error(function (error) {
+                eCallback(error);
+            })
+    }
+
+    var error = function (msg) {
+        console.log(msg);
+    };
+
+    var toCurrency = function (num) {
+        return num.toLocaleString('pl', {style: 'currency', currency: 'PLN'})
+    };
+
+    sendAjax("data/summary", "GET", {}, function (msg) {
+        console.log(msg);
+        console.log(msg.content[0].balance.toLocaleString('pl', {style: 'currency', currency: 'PLN'}));
+
+        var number = msg.content[0];
+
+
+        balance.html(toCurrency(number.balance));
+        funds.html(toCurrency(number.funds));
+        payment.html(toCurrency(number.payments));
+
+
+    }, error);
+
+    var balance = $('#balance'),
+        funds = $('#funds'),
+        payment = $('#payments');
+
     var tileMenu = $('.tile.tile__menu'),
         buttonControl = $('.icon__control'),
         buttonSearch = $('.button__search'),
         buttonLogout = $('.button__logout'),
         inputSearch = $('.input__search'),
-
         on = '__active';
 
 
-
-    tileMenu.on('click' , function () {
+    tileMenu.on('click', function () {
         for (var i = 0; i < tileMenu.length; i++) {
             tileMenu.removeClass(on);
         }
@@ -166,15 +217,30 @@ $(document).on('ready', function () {
     });
 
 
-
     buttonLogout.on('click', function () {
-       $(this)
-           .addClass('__active')
-           .next()
-           .toggleClass('__active');
+        $(this)
+            .addClass('__active')
+            .next()
+            .toggleClass('__active');
     });
 
+    /**
+     * History
+     */
+
+    var amount = $('#hist-amount'),
+        date = $('#hist-date'),
+        msg = $('#hist-msg');
 
 
+    sendAjax("data/history", "GET", {}, function (msg) {
+        console.log(msg);
+        console.log(msg.content[0].date);
+
+
+
+        var history = msg.content[0];
+
+    }, error);
 
 });

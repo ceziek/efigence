@@ -1,116 +1,308 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="css/foundation-icons.css">
-    <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/foundation-icons.css">
+  <link rel="stylesheet" href="css/app.css">
 
-    <title>Dashboard</title>
+  <title>Dashboard</title>
 </head>
 <body>
 
 <div class="dashboard-page">
-    <header>
-        <div class="row collapse header-wrapper">
-            <div class="small-12 large-1 show-for-large columns tile">
+  <header>
+    <div class="row collapse header-wrapper">
+      <div class="small-12 large-1 show-for-large columns tile">
 
-                    <img src="../assets/logo.png" class="tile__content"/>
+        <img src="../assets/logo.png" class="tile__content"/>
 
-            </div>
-            <div class="medium-12 show-for-medium large-1 columns tile">
+      </div>
+      <div class="medium-12 show-for-medium large-1 columns tile">
 
-                    <img src="../assets/avatar.png" class="tile__content"/>
+        <img src="../assets/avatar.png" class="tile__content"/>
 
 
+      </div>
+      <div class="small-12 large-2 columns tile">
+        <div class="tile__content max">
+          <div class="box__control">
+            <h3>Jan Kowalski</h3>
+            <button class="fi-mail icon__control">
+              <span class="alert round label">1</span>
+            </button>
+            <div class="popup popup__menu ">
+              <ul>
+                <li>
+                  <button class="button__popup">Messages (1)</button>
+                </li>
+                <li>
+                  <button class="button__popup">New</button>
+                </li>
+                <li>
+                  <button class="button__popup">Deleted</button>
+                </li>
+              </ul>
             </div>
-            <div class="small-12 large-2 columns tile">
-                <div class="tile__content max">
-                    <div class="box__control">
-                        <h2>Jan Kowalski</h2>
-                        <button class="fi-mail icon__control">
-                            <span class="alert round label">1</span>
-                        </button>
-                        <div class="popup popup__menu ">
-                            <ul>
-                                <li>
-                                    <button class="button__popup">Messages (1)</button>
-                                </li>
-                                <li>
-                                    <button class="button__popup">New</button>
-                                </li>
-                                <li>
-                                    <button class="button__popup">Deleted</button>
-                                </li>
-                            </ul>
-                        </div>
-                        <button class="fi-wrench icon__control"></button>
-                        <div class="popup popup__menu reversed">
-                            <ul>
-                                <li>
-                                    <button class="button__popup">Profile</button>
-                                </li>
-                                <li>
-                                    <button class="button__popup">Help</button>
-                                </li>
-                                <li>
-                                    <button class="button__popup">Settings</button>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+            <button class="fi-wrench icon__control"></button>
+            <div class="popup popup__menu reversed">
+              <ul>
+                <li>
+                  <button class="button__popup">Profile</button>
+                </li>
+                <li>
+                  <button class="button__popup">Help</button>
+                </li>
+                <li>
+                  <button class="button__popup">Settings</button>
+                </li>
+              </ul>
             </div>
-
-            <div class="small-12  medium-6 large-1 columns large-push-1 tile tile__menu __active">
-                <div class=" tile__content">
-                    <i class="fi-home icon__menu"></i>
-                    <p>Home</p>
-                </div>
-            </div>
-            <div class="small-12  medium-6 large-1 columns large-push-1 tile tile__menu">
-                <div class="tile__content">
-                    <button class="fi-graph-trend icon__menu"></button>
-                    <p>Analyze</p>
-                </div>
-            </div>
-            <div class="small-12 medium-6 large-1 columns large-push-1 tile tile__menu">
-                <div class="tile__content">
-                    <button class="fi-clipboard-notes icon__menu"></button>
-                    <p>Plan</p>
-                </div>
-            </div>
-            <div class="small-12 medium-6 large-1 columns large-push-1 tile tile__menu">
-                <div class="tile__content">
-                    <i class="fi-dollar-bill icon__menu"></i>
-                    <p>Earn</p>
-                </div>
-            </div>
-
-            <div class="small-12 large-1 columns tile">
-                <div class="tile__content max">
-                    <div class="box__logout">
-                        <input type="text" title="Search" class="input__search">
-                        <button class="button__search fx-mirrored fi-magnifying-glass icon__logout">
-                        </button>
-                        <button class="button__logout border-left fi-power  icon__logout"></button>
-                        <div class="popup popup__menu popup__left ">
-                            <ul>
-                                <li>
-                                    <button class="button__popup">Logout</button>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
-    </header>
-    <main>
+      </div>
 
-    </main>
+      <div class="small-12  medium-6 large-1 columns large-push-1 tile tile__menu __active">
+        <div class=" tile__content">
+          <i class="fi-home icon__menu"></i>
+          <p>Home</p>
+        </div>
+      </div>
+      <div class="small-12  medium-6 large-1 columns large-push-1 tile tile__menu">
+        <div class="tile__content">
+          <button class="fi-graph-trend icon__menu"></button>
+          <p>Analyze</p>
+        </div>
+      </div>
+      <div class="small-12 medium-6 large-1 columns large-push-1 tile tile__menu">
+        <div class="tile__content">
+          <button class="fi-clipboard-notes icon__menu"></button>
+          <p>Plan</p>
+        </div>
+      </div>
+      <div class="small-12 medium-6 large-1 columns large-push-1 tile tile__menu">
+        <div class="tile__content">
+          <i class="fi-dollar-bill icon__menu"></i>
+          <p>Earn</p>
+        </div>
+      </div>
+
+      <div class="small-12 large-1 columns tile">
+        <div class="tile__content max">
+          <div class="box__logout">
+            <input type="text" title="Search" class="input__search">
+            <button class="button__search fx-mirrored fi-magnifying-glass icon__logout">
+            </button>
+            <button class="button__logout border-left fi-power  icon__logout"></button>
+            <div class="popup popup__menu popup__left ">
+              <ul>
+                <li>
+                  <button class="button__popup">Logout</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="finance">
+      <div class="row">
+
+        <div class="large-8 column">
+          <div class="row">
+            <h1>Finance life stream</h1>
+            <div class="large-4 column">
+              <h4>Balance</h4>
+              <span id="balance" class="currency">7200,34 </span>
+            </div>
+            <div class="large-4 column">
+              <h4>Available founds</h4>
+              <span id="funds" class="currency">7200,34 </span>
+            </div>
+            <div class="large-4 column">
+              <h4>Scheduled payments</h4>
+              <span id="payments" class="currency">2200,34 </span>
+            </div>
+          </div>
+        </div>
+        <div class="large-3 column">
+          <div class="row collapse wrapper-add">
+            <div class="large-2 column">Add</div>
+            <div class="large-5 column text-center">
+              <button class="button__finance">BANK</button>
+            </div>
+            <div class="large-5 column text-center">
+              <button class="button__finance">PAYMENT</button>
+            </div>
+          </div>
+          <div class="row wrapper-analys collapse">
+            <div class="large-7 column text-right">Accounts analysys</div>
+            <div class="large-5 column text-center">
+              <div class="switch">
+                <input class="switch-input" id="exampleSwitch" type="checkbox" name="exampleSwitch">
+                <label class="switch-paddle" for="exampleSwitch">
+                  <span class="show-for-sr">Download Kittens</span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="history">
+      <div class="row">
+        <div class="large-6 columns"></div>
+        <div class="large-6 columns">
+          <div class="list-component">
+            <ul>
+              <li>
+                <div class="row max-height">
+                  <div class="large-2 columns center max-height">
+                    <span id="hist-date">29.02</span>
+                  </div>
+                  <div class="large-8 columns">
+                    <div class="row">
+                      <div class="large-12 columns"><p id="hist-msg">sadsadsasaasdsadsa</p></div>
+                    </div>
+                    <div class="row">
+                      <div class="large-12 columns"><p>sadsadsasaasdsadsa</p></div>
+                    </div>
+                  </div>
+                  <div class="large-2 columns">
+                    <span id="hist-amount">123 PLN</span>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="row">
+                  <div class="large-2 columns">
+                    29.02
+                  </div>
+                  <div class="large-8 columns">
+                    <div class="row">
+                      <div class="large-12 columns"><p>sadsadsasaasdsadsa</p></div>
+                    </div>
+                    <div class="row">
+                      <div class="large-12 columns"><p>sadsadsasaasdsadsa</p></div>
+
+                    </div>
+
+                  </div>
+                  <div class="large-2 columns">
+                    123
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="row">
+                  <div class="large-2 columns">
+                    29.02
+                  </div>
+                  <div class="large-8 columns">
+                    <div class="row">
+                      <div class="large-12 columns"><p>sadsadsasaasdsadsa</p></div>
+                    </div>
+                    <div class="row">
+                      <div class="large-12 columns"><p>sadsadsasaasdsadsa</p></div>
+
+                    </div>
+
+                  </div>
+                  <div class="large-2 columns">
+                    123
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="row">
+                  <div class="large-2 columns">
+                    29.02
+                  </div>
+                  <div class="large-8 columns">
+                    <div class="row">
+                      <div class="large-12 columns"><p>sadsadsasaasdsadsa</p></div>
+                    </div>
+                    <div class="row">
+                      <div class="large-12 columns"><p>sadsadsasaasdsadsa</p></div>
+
+                    </div>
+
+                  </div>
+                  <div class="large-2 columns">
+                    123
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="row">
+                  <div class="large-2 columns">
+                    29.02
+                  </div>
+                  <div class="large-8 columns">
+                    <div class="row">
+                      <div class="large-12 columns"><p>sadsadsasaasdsadsa</p></div>
+                    </div>
+                    <div class="row">
+                      <div class="large-12 columns"><p>sadsadsasaasdsadsa</p></div>
+
+                    </div>
+
+                  </div>
+                  <div class="large-2 columns">
+                    123
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="row">
+                  <div class="large-2 columns">
+                    29.02
+                  </div>
+                  <div class="large-8 columns">
+                    <div class="row">
+                      <div class="large-12 columns"><p>sadsadsasaasdsadsa</p></div>
+                    </div>
+                    <div class="row">
+                      <div class="large-12 columns"><p>sadsadsasaasdsadsa</p></div>
+
+                    </div>
+
+                  </div>
+                  <div class="large-2 columns">
+                    123
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="row">
+                  <div class="large-2 columns">
+                    29.02
+                  </div>
+                  <div class="large-8 columns">
+                    <div class="row">
+                      <div class="large-12 columns"><p>sadsadsasaasdsadsa</p></div>
+                    </div>
+                    <div class="row">
+                      <div class="large-12 columns"><p>sadsadsasaasdsadsa</p></div>
+
+                    </div>
+
+                  </div>
+                  <div class="large-2 columns">
+                    123
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
 </div>
 
